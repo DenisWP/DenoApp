@@ -1,10 +1,12 @@
 package com.example.farid.denoapp;
 
+import java.io.Serializable;
+
 /**
  * Created by Farid on 04/08/2017.
  */
 
-public class Produto {
+public class Produto implements Serializable{
     private String codigo, descricao, valor;
 
 
