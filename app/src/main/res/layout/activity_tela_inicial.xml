@@ -90,7 +90,7 @@
         android:layout_alignStart="@+id/txtSifrao"
         android:layout_below="@+id/txtSifrao"
         android:layout_marginTop="87dp"
-        android:ems="10"
+        android:ems="2"
         android:hint="@string/txtValor"
         android:inputType="textPersonName" />
 
