@@ -32,32 +32,5 @@ public class TelaInicial extends AppCompatActivity {
         txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
         txtSifrao = (TextView) findViewById(R.id.txtSifrao);
         txtValor = (TextView) findViewById(R.id.txtValor);
-
-        HttpURLConnection connection;
-
-        try {
-            URL url = new URL("Conexão estabelecida !");
-            connection = (HttpURLConnection) url.openConnection();
-            connection.connect();
-
-
-
-            InputStream stream = connection.getInputStream();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(stream));
-
-
-
-
-
-
-
-        }catch (MalformedURLException e){
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-
     }
-
 }
