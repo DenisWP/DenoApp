@@ -21,6 +21,8 @@ public class TelaInicial extends AppCompatActivity {
     private EditText edtCodBarras;
     private TextView txtCodBarras, txtDescProduto, txtSifrao, txtValor;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,5 +34,8 @@ public class TelaInicial extends AppCompatActivity {
         txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
         txtSifrao = (TextView) findViewById(R.id.txtSifrao);
         txtValor = (TextView) findViewById(R.id.txtValor);
+
+        String site = "http://192.168.0.12:8001/api/Produtos?regiao=1&codigobarra="+ edtCodBarras;
+
     }
 }
