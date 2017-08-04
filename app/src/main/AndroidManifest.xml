@@ -3,7 +3,7 @@
     package="com.example.farid.denoapp">
 
     <!-- Adicionando permissão de internet !-->
-
+    <uses-permission android:name="android.permission.INTERNET"/>
 
 
     <application
