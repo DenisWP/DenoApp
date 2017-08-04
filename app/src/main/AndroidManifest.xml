@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.farid.denoapp">
 
-    <!-- Adicionando permissão de internet !-->
+    <!-- Adicionando permissão para acessar a internet !-->
     <uses-permission android:name="android.permission.INTERNET"/>
 
 

@@ -9,8 +9,6 @@ import java.io.Serializable;
 public class Produto implements Serializable{
     private String codigo, descricao, valor;
 
-
-
     public String getCodigo() {
         return codigo;
     }
@@ -25,7 +23,6 @@ public class Produto implements Serializable{
     public void setDescricao(String descricao){
         this.descricao = descricao;
     }
-
 
     public String getValor(){
         return valor;
