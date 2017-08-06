@@ -1,13 +1,11 @@
 package com.example.farid.denoapp;
 
-
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.*;
 import android.os.AsyncTask;
-import android.view.View;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
@@ -18,12 +16,9 @@ import java.io.IOException;
 public class TelaInicial extends AppCompatActivity {
 
 
-    /* declarando os objetos criados. */
     ImageView LogoFarid;
     EditText edtCodBarras;
     TextView txtCodBarras, txtCodProduto, txtDescProduto, txtSifrao, txtValor;
-
-
     String[] objetos = new String[3];
     String regiao = "1";
 
@@ -95,9 +90,9 @@ public class TelaInicial extends AppCompatActivity {
         @Override
         protected void onPostExecute(String[] stringFromDoInBackground) {
 
-            txtCodProduto = (TextView) findViewById(R.id.txtCodProduto);
-            txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
-            txtValor = (TextView) findViewById(R.id.txtValor);
+            //txtCodProduto = (TextView) findViewById(R.id.txtCodProduto);
+            //txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
+            //txtValor = (TextView) findViewById(R.id.txtValor);
 
 
 
