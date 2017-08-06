@@ -3,6 +3,8 @@ package com.example.farid.denoapp;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.*;
 import android.os.AsyncTask;
 import android.view.View;
@@ -43,13 +45,28 @@ public class TelaInicial extends AppCompatActivity {
 
 
         String pegaCodBarras = edtCodBarras.getText().toString();
-        String url = "http://192.168.0.12:8001/api/Produtos?regiao=" + regiao + "1&codigobarra="+ pegaCodBarras;
+        final String url = "http://192.168.0.12:8001/api/Produtos?regiao=" + regiao + "1&codigobarra="+ pegaCodBarras;
 
 
 
+        edtCodBarras.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                new AsyncTaskExample().execute(url);
+            }
+        });
 
 
-        new AsyncTaskExample().execute(url);
     }
 
 
