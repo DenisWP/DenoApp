@@ -1,16 +1,17 @@
 package com.example.farid.denoapp;
 
+import android.app.ProgressDialog;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.*;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 
 public class TelaInicial extends AppCompatActivity {
@@ -21,7 +22,9 @@ public class TelaInicial extends AppCompatActivity {
     private EditText edtCodBarras;
     private TextView txtCodBarras, txtDescProduto, txtSifrao, txtValor;
 
+    private ProgressDialog pDialog;
 
+    ArrayList<HashMap<String, String>> produtos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,5 +40,14 @@ public class TelaInicial extends AppCompatActivity {
 
         String site = "http://192.168.0.12:8001/api/Produtos?regiao=1&codigobarra="+ edtCodBarras;
 
+        produtos = new ArrayList<>();
+
+
     }
+
+
+
+
+
+
 }
