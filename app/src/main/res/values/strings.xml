@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DenoApp</string>
+    <string name="app_name">Busca Preço</string>
     
     <!-- TEXTVIEW-->
     <string name="txtCodBarras">Código de Barras</string>

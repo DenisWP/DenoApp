@@ -74,13 +74,13 @@
         android:id="@+id/txtSifrao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtDescProduto"
-        android:layout_alignStart="@+id/txtDescProduto"
-        android:layout_below="@+id/txtDescProduto"
-        android:layout_marginTop="43dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="@string/txtSifrao" />
+        android:hint="@string/txtSifrao"
+        android:layout_below="@+id/txtDescProduto"
+        android:layout_alignLeft="@+id/txtDescProduto"
+        android:layout_alignStart="@+id/txtDescProduto"
+        android:layout_marginTop="15dp" />
 
     <TextView
         android:id="@+id/txtValor"
@@ -93,6 +93,26 @@
         android:ems="2"
         android:hint="@string/txtValor"
         android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/btnVer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/edtCodBarras"
+        android:layout_alignStart="@+id/edtCodBarras"
+        android:layout_alignTop="@+id/edtCodBarras"
+        android:layout_marginTop="46dp"
+        android:text="Ver" />
+
+    <Button
+        android:id="@+id/btnLimpar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/btnVer"
+        android:layout_alignStart="@+id/btnVer"
+        android:layout_below="@+id/btnVer"
+        android:layout_marginTop="15dp"
+        android:text="Limpar" />
 
 
 </RelativeLayout>
