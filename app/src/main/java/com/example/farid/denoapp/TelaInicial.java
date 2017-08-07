@@ -1,7 +1,10 @@
 package com.example.farid.denoapp;
 
+import android.net.wifi.p2p.WifiP2pManager;
+import android.os.SystemClock;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.*;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
@@ -10,8 +13,7 @@ import android.os.AsyncTask;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
-
-
+import java.util.Timer;
 
 
 public class TelaInicial extends AppCompatActivity {
@@ -40,35 +42,9 @@ public class TelaInicial extends AppCompatActivity {
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
 
 
+        BuscaProduto();
 
-
-
-        /*Botões para testes
-        btnVer = (Button) findViewById(R.id.btnVer);
-        btnVer.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                CB = edtCodBarras.getText().toString();
-                url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
-                new AsyncTaskExample().execute(url);
-            }
-        });
-
-
-
-        btnLimpar = (Button) findViewById(R.id.btnLimpar);
-        btnLimpar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                limparDados();
-            }
-        });*/
-
-
-
-
-
-        edtCodBarras.addTextChangedListener(new TextWatcher() {
+         /*edtCodBarras.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -85,16 +61,39 @@ public class TelaInicial extends AppCompatActivity {
                 url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
                 new AsyncTaskExample().execute(url);
             }
-        });
+
+
+        });*/
+
+
 
 
     }
 
-    public void limparDados(){
-        txtCodProduto.setText("");
-        txtDescProduto.setText("");
-        txtValor.setText("");
-        edtCodBarras.setText("");
+    public void BuscaProduto (){
+        edtCodBarras.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                CB = edtCodBarras.getText().toString();
+                url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
+                new AsyncTaskExample().execute(url);
+            }
+        });
+    }
+
+    public void limparDados() {
+            txtCodProduto.setText("");
+            txtDescProduto.setText("");
+            txtValor.setText("");
+            edtCodBarras.setText("");
     }
 
 
@@ -107,7 +106,6 @@ public class TelaInicial extends AppCompatActivity {
 
         @Override
         protected String[] doInBackground(String... url) {
-
             try {
                 jsonObjectTexts = JsonParser.LerJsonUrl(url[0]);
                 objetos[0] = jsonObjectTexts.getString("Codigo");
@@ -116,7 +114,6 @@ public class TelaInicial extends AppCompatActivity {
             } catch (IOException | JSONException e) {
                 e.printStackTrace();
             }
-
             return objetos;
         }
 
@@ -125,9 +122,6 @@ public class TelaInicial extends AppCompatActivity {
             txtCodProduto.setText(stringFromDoInBackground[0]);
             txtDescProduto.setText(stringFromDoInBackground[1]);
             txtValor.setText(stringFromDoInBackground[2]);
-
         }
     }
-
-
 }
