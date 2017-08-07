@@ -35,10 +35,11 @@ public class TelaInicial extends AppCompatActivity {
         setContentView(R.layout.activity_tela_inicial);
 
         LogoFarid = (ImageView) findViewById(R.id.LogoFarid);
-        //txtCodBarras = (TextView) findViewById(R.id.txtCodBarras);
-        //txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
+        txtCodBarras = (TextView) findViewById(R.id.txtCodBarras);
+        txtCodProduto = (TextView) findViewById(R.id.txtCodProduto);
+        txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
         txtSifrao = (TextView) findViewById(R.id.txtSifrao);
-       //txtValor = (TextView) findViewById(R.id.txtValor);
+        txtValor = (TextView) findViewById(R.id.txtValor);
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
 
         /*Botões para testes*/
@@ -119,13 +120,6 @@ public class TelaInicial extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String[] stringFromDoInBackground) {
-
-            txtCodProduto = (TextView) findViewById(R.id.txtCodProduto);
-            txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
-            txtValor = (TextView) findViewById(R.id.txtValor);
-
-
-
             txtCodProduto.setText(stringFromDoInBackground[0]);
             txtDescProduto.setText(stringFromDoInBackground[1]);
             txtValor.setText(stringFromDoInBackground[2]);

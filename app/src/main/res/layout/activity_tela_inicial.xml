@@ -46,53 +46,53 @@
 
     <TextView
         android:id="@+id/txtCodProduto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/LogoFarid"
-        android:layout_alignStart="@+id/LogoFarid"
-        android:layout_below="@+id/LogoFarid"
-        android:layout_marginLeft="29dp"
-        android:layout_marginStart="29dp"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="20dp"
         android:ems="10"
+        android:hint="@string/txtCodProduto"
         android:inputType="textPersonName"
-        android:hint="@string/txtCodProduto" />
+        android:layout_below="@+id/btnLimpar"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:id="@+id/txtDescProduto"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/txtCodProduto"
-        android:layout_alignStart="@+id/txtCodProduto"
-        android:layout_below="@+id/txtCodProduto"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
+        android:hint="@string/txtDescProduto"
         android:inputType="textPersonName"
-        android:hint="@string/txtDescProduto" />
+        android:layout_below="@+id/txtCodProduto"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/txtSifrao"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/txtSifrao"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/txtDescProduto"
-        android:layout_alignLeft="@+id/txtDescProduto"
-        android:layout_alignStart="@+id/txtDescProduto"
-        android:layout_marginTop="15dp" />
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="@string/txtSifrao"
+        android:inputType="textPersonName" />
 
     <TextView
         android:id="@+id/txtValor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_alignLeft="@+id/txtSifrao"
         android:layout_alignStart="@+id/txtSifrao"
         android:layout_below="@+id/txtSifrao"
-        android:layout_marginTop="87dp"
+        android:layout_marginTop="18dp"
         android:ems="2"
         android:hint="@string/txtValor"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textSize="36sp"
+        tools:textSize="30sp" />
 
     <Button
         android:id="@+id/btnVer"
