@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.*;
 import android.os.AsyncTask;
 import org.json.JSONException;
@@ -38,52 +39,23 @@ public class TelaInicial extends AppCompatActivity {
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
 
 
-        BuscaProduto();
 
-         /*edtCodBarras.addTextChangedListener(new TextWatcher() {
+        btnVer = (Button) findViewById(R.id.btnVer);
+        btnVer.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-                CB = edtCodBarras.getText().toString();
-                url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
-                new AsyncTaskExample().execute(url);
-            }
-
-
-        });*/
-
-
-
-
-    }
-
-    public void BuscaProduto (){
-        edtCodBarras.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
+            public void onClick(View v) {
                 CB = edtCodBarras.getText().toString();
                 url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
                 new AsyncTaskExample().execute(url);
             }
         });
+
+
+        btnLimpar = (Button) findViewById(R.id.btnLimpar);
+
     }
+
+
 
     public void limparDados() {
             txtCodProduto.setText("");
@@ -121,3 +93,27 @@ public class TelaInicial extends AppCompatActivity {
         }
     }
 }
+
+    /*
+    *
+    * LISTENER NO EDITTEXT - APENAS PARA TESTE (NÃO APAGUEI)
+    *
+    * */
+   /* public void BuscaProduto (){
+        edtCodBarras.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                CB = edtCodBarras.getText().toString();
+                url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
+                new AsyncTaskExample().execute(url);
+            }
+        });
+    }*/

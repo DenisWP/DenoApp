@@ -4,8 +4,6 @@ package com.example.farid.denoapp;
  * Created by Denis Wilson on 05/08/2017.
  */
 
-
-
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.BufferedReader;
