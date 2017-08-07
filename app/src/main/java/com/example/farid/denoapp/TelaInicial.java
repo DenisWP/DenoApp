@@ -38,8 +38,6 @@ public class TelaInicial extends AppCompatActivity {
         txtValor = (TextView) findViewById(R.id.txtValor);
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
 
-
-
         btnVer = (Button) findViewById(R.id.btnVer);
         btnVer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,7 +48,6 @@ public class TelaInicial extends AppCompatActivity {
             }
         });
 
-
         btnLimpar = (Button) findViewById(R.id.btnLimpar);
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,6 +55,9 @@ public class TelaInicial extends AppCompatActivity {
                 limparDados();
             }
         });
+
+
+
 
     }
 
