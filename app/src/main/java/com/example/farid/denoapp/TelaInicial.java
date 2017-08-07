@@ -24,9 +24,6 @@ public class TelaInicial extends AppCompatActivity {
     String regiao = "1";
     Button btnVer, btnLimpar;
     String url, CB;
-
-
-
     JSONObject jsonObjectTexts;
 
     @Override
@@ -46,7 +43,7 @@ public class TelaInicial extends AppCompatActivity {
 
 
 
-        /*Botões para testes*/
+        /*Botões para testes
         btnVer = (Button) findViewById(R.id.btnVer);
         btnVer.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,13 +62,13 @@ public class TelaInicial extends AppCompatActivity {
             public void onClick(View v) {
                 limparDados();
             }
-        });
+        });*/
 
 
 
 
 
-        /*edtCodBarras.addTextChangedListener(new TextWatcher() {
+        edtCodBarras.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
@@ -84,9 +81,11 @@ public class TelaInicial extends AppCompatActivity {
 
             @Override
             public void afterTextChanged(Editable s) {
+                CB = edtCodBarras.getText().toString();
+                url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
                 new AsyncTaskExample().execute(url);
             }
-        });*/
+        });
 
 
     }
