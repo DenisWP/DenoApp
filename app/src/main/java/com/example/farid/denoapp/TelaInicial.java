@@ -22,9 +22,9 @@ public class TelaInicial extends AppCompatActivity {
     TextView txtCodBarras, txtCodProduto, txtDescProduto, txtSifrao, txtValor;
     String[] objetos = new String[3];
     String regiao = "1";
-    String pegaCodBarras;
     Button btnVer, btnLimpar;
-    String url = "http://192.168.0.12:8001/api/Produtos?regiao=1&codigobarra=123456";
+    String url, CB;
+
 
 
     JSONObject jsonObjectTexts;
@@ -42,16 +42,17 @@ public class TelaInicial extends AppCompatActivity {
         txtValor = (TextView) findViewById(R.id.txtValor);
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
 
+
+
+
+
         /*Botões para testes*/
-
-        pegaCodBarras = edtCodBarras.getText().toString();
-        //final String url = "http://192.168.0.12:8001/api/Produtos?regiao=" + regiao + "1&codigobarra="+ pegaCodBarras;
-
-
         btnVer = (Button) findViewById(R.id.btnVer);
         btnVer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CB = edtCodBarras.getText().toString();
+                url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
                 new AsyncTaskExample().execute(url);
             }
         });
@@ -94,10 +95,12 @@ public class TelaInicial extends AppCompatActivity {
         txtCodProduto.setText("");
         txtDescProduto.setText("");
         txtValor.setText("");
+        edtCodBarras.setText("");
     }
 
 
     public class AsyncTaskExample extends AsyncTask<String, String, String[]> {
+
 
         @Override
         protected void onPreExecute() {
