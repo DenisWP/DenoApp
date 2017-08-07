@@ -52,6 +52,12 @@ public class TelaInicial extends AppCompatActivity {
 
 
         btnLimpar = (Button) findViewById(R.id.btnLimpar);
+        btnLimpar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                limparDados();
+            }
+        });
 
     }
 
