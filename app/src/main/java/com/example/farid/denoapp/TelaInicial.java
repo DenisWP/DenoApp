@@ -1,19 +1,15 @@
 package com.example.farid.denoapp;
 
-import android.net.wifi.p2p.WifiP2pManager;
-import android.os.SystemClock;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.*;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.View;
 import android.widget.*;
 import android.os.AsyncTask;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
-import java.util.Timer;
 
 
 public class TelaInicial extends AppCompatActivity {
