@@ -18,6 +18,7 @@
         android:layout_marginStart="27dp"
         android:layout_below="@+id/txtDescProduto" />
 
+
     <EditText
         android:id="@+id/edtCodBarras"
         android:layout_width="300dp"

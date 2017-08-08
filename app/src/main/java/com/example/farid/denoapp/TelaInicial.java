@@ -43,12 +43,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         btnVer = (Button) findViewById(R.id.btnVer);
         btnLimpar = (Button) findViewById(R.id.btnLimpar);
         edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
-        btnLimpar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                limparDados();
-            }
-        });
+
         carregaEnter();
     }
 
@@ -70,7 +65,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
                     @Override
                     public void run() {
                         try {
-                            Thread.sleep(5000);
+                            Thread.sleep(7000);
                         } catch (InterruptedException e) {
                             e.printStackTrace();
                         }
