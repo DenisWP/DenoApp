@@ -53,25 +53,26 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
                 CB = edtCodBarras.getText().toString();
                     url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
                     new AsyncTaskExample().execute(url);
+
                  /*Thred criada para apagar os campos após 5 segundos*/
 
 
-                 new Thread(new Runnable() {
-                    @Override
-                    public void run() {
-                        try {
-                            Thread.sleep(5000);
-                        } catch (InterruptedException e) {
-                            e.printStackTrace();
-                        }
+                     new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                Thread.sleep(5000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
                             runOnUiThread(new Runnable() {
-                    @Override
-                    public void run() {
-                        limparDados();
-                    }
-                });
-            }
-                }).start();
+                                @Override
+                            public void run() {
+                                limparDados();
+                            }
+                        });
+                     }
+                    }).start();
             }
         });
     }
