@@ -11,7 +11,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 
-public class TelaInicial extends AppCompatActivity implements View.OnKeyListener{
+public class TelaInicial extends AppCompatActivity implements View.OnKeyListener {
     // apagar View.OnKeyListener se o leitor não funcionar.
 
 
@@ -37,10 +37,21 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         txtValor = (TextView) findViewById(R.id.txtValor);
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
         btnVer = (Button) findViewById(R.id.btnVer);
-        edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
 
+        edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
         carregaEnter();
+
+
     }
+
+
+
+
+
+
+
+
+
 
     /*
     * Função criada para testar se a tecla "ENTER" do teclado ou o "Conclui." foi pressionada.
@@ -79,7 +90,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
 
     /*
     * Apagar esse função se o leitor não funcionar.
-    * */
+    */
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event) {
         if((event.getAction()==KeyEvent.ACTION_DOWN)&&(keyCode==KeyEvent.KEYCODE_ENTER)){
