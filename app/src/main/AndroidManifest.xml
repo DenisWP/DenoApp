@@ -14,7 +14,9 @@
         android:theme="@style/AppTheme">
 
         <!-- Definindo minha tela incial -->
-        <activity android:name=".TelaInicial">
+        <activity android:name=".TelaInicial"
+            android:screenOrientation="landscape"> <!-- Travando o layout para horizontal-->
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
