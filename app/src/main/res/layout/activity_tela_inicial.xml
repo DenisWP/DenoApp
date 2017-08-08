@@ -23,12 +23,12 @@
         android:id="@+id/edtCodBarras"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="21dp"
         android:ems="10"
         android:hint="@string/edtLeitorBarras"
         android:inputType="textPersonName"
         android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/btnVer" />
+        android:layout_alignRight="@+id/txtValor"
+        android:layout_alignEnd="@+id/txtValor" />
 
     <TextView
         android:id="@+id/txtCodProduto"
@@ -62,14 +62,14 @@
         android:id="@+id/txtSifrao"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_below="@+id/txtDescProduto"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="22dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/txtSifrao"
         android:inputType="textPersonName"
-        android:textSize="100sp" />
+        android:textSize="100sp"
+        android:layout_above="@+id/btnVer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="26dp" />
 
     <TextView
         android:id="@+id/txtValor"
@@ -83,31 +83,25 @@
         android:textColorLink="@android:color/holo_red_dark"
         android:textSize="100sp"
         tools:textSize="100sp"
-        android:layout_alignTop="@+id/txtSifrao"
-        android:layout_alignRight="@+id/btnVer"
-        android:layout_alignEnd="@+id/btnVer" />
+        android:layout_alignBottom="@+id/txtSifrao"
+        android:layout_toRightOf="@+id/txtSifrao"
+        android:layout_toEndOf="@+id/txtSifrao"
+        android:layout_marginLeft="45dp"
+        android:layout_marginStart="45dp"
+        android:layout_alignTop="@+id/txtSifrao" />
 
     <Button
         android:id="@+id/btnVer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Ver"
-        android:layout_marginRight="37dp"
-        android:layout_marginEnd="37dp"
-        android:layout_alignBottom="@+id/edtCodBarras"
-        android:layout_toLeftOf="@+id/btnLimpar"
-        android:layout_toStartOf="@+id/btnLimpar" />
-
-    <Button
-        android:id="@+id/btnLimpar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Limpar"
-        android:layout_marginRight="61dp"
-        android:layout_marginEnd="61dp"
-        android:layout_alignBottom="@+id/edtCodBarras"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="26dp"
+        android:layout_marginEnd="26dp" />
+
+
 
 
 </RelativeLayout>

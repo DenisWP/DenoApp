@@ -41,7 +41,6 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         txtValor = (TextView) findViewById(R.id.txtValor);
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
         btnVer = (Button) findViewById(R.id.btnVer);
-        btnLimpar = (Button) findViewById(R.id.btnLimpar);
         edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
 
         carregaEnter();
