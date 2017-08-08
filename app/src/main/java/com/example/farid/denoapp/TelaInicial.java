@@ -28,10 +28,10 @@ public class TelaInicial extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide(); /*Retirando a barra de título do app*/
         setContentView(R.layout.activity_tela_inicial);
 
         LogoFarid = (ImageView) findViewById(R.id.LogoFarid);
-        txtCodBarras = (TextView) findViewById(R.id.txtCodBarras);
         txtCodProduto = (TextView) findViewById(R.id.txtCodProduto);
         txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
         txtSifrao = (TextView) findViewById(R.id.txtSifrao);

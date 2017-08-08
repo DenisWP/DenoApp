@@ -10,118 +10,105 @@
         android:id="@+id/LogoFarid"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginLeft="26dp"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="33dp"
-        app:srcCompat="@mipmap/ic_launcher" />
-
-    <TextView
-        android:id="@+id/txtCodBarras"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:hint="@string/txtCodBarras"
-        android:layout_marginTop="22dp"
-        android:layout_alignParentTop="true"
-        android:layout_toRightOf="@+id/LogoFarid"
-        android:layout_toEndOf="@+id/LogoFarid"
-        android:layout_marginLeft="21dp"
-        android:layout_marginStart="21dp" />
+        app:srcCompat="@mipmap/ic_launcher"
+        android:layout_above="@+id/btnVer"
+        android:layout_alignLeft="@+id/edtCodBarras"
+        android:layout_alignStart="@+id/edtCodBarras"
+        android:layout_marginBottom="23dp" />
 
     <EditText
         android:id="@+id/edtCodBarras"
-        android:layout_width="match_parent"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="21dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/edtLeitorBarras"
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/txtCodBarras"
-        android:layout_toRightOf="@+id/LogoFarid"
-        android:layout_toEndOf="@+id/LogoFarid" />
+        android:inputType="textPersonName"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_toLeftOf="@+id/btnVer"
+        android:layout_toStartOf="@+id/btnVer" />
 
     <TextView
         android:id="@+id/txtCodProduto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
         android:ems="10"
         android:hint="@string/txtCodProduto"
         android:inputType="textPersonName"
-        android:layout_below="@+id/btnVer"
-        android:layout_alignLeft="@+id/txtCodBarras"
-        android:layout_alignStart="@+id/txtCodBarras" />
+        android:layout_below="@+id/edtCodBarras"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:id="@+id/txtDescProduto"
-        android:layout_width="350dp"
-        android:layout_height="350dp"
-        android:layout_alignBottom="@+id/txtValor"
-        android:layout_alignLeft="@+id/LogoFarid"
-        android:layout_alignStart="@+id/LogoFarid"
-        android:layout_alignTop="@+id/txtValor"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="11dp"
         android:ems="10"
+        android:gravity="center"
         android:hint="@string/txtDescProduto"
         android:inputType="textPersonName"
         android:textColorLink="@android:color/holo_red_dark"
-        android:textSize="36sp" />
+        android:textSize="100dp"
+        tools:textSize="50dp" />
 
     <TextView
         android:id="@+id/txtSifrao"
-        android:layout_width="50dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_alignBaseline="@+id/txtValor"
+        android:layout_alignBottom="@+id/txtValor"
+        android:layout_toStartOf="@+id/txtValor"
         android:ems="10"
         android:hint="@string/txtSifrao"
         android:inputType="textPersonName"
-        android:layout_alignBaseline="@+id/txtValor"
-        android:layout_alignBottom="@+id/txtValor"
-        android:layout_toLeftOf="@+id/txtValor"
-        android:layout_toStartOf="@+id/txtValor" />
+        android:textSize="100sp" />
 
     <TextView
         android:id="@+id/txtValor"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_below="@+id/txtCodProduto"
-        android:layout_marginEnd="33dp"
-        android:layout_marginRight="33dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="250dp"
+        android:layout_height="150dp"
+        android:layout_alignBottom="@+id/LogoFarid"
+        android:layout_alignEnd="@+id/btnLimpar"
+        android:layout_alignRight="@+id/btnLimpar"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:ems="2"
+        android:gravity="center"
         android:hint="@string/txtValor"
         android:inputType="textPersonName"
         android:textColorLink="@android:color/holo_red_dark"
-        android:textSize="36sp"
-        tools:textSize="30sp" />
+        android:textSize="100sp"
+        tools:textSize="100sp" />
 
     <Button
         android:id="@+id/btnVer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/edtCodBarras"
-        android:layout_alignStart="@+id/edtCodBarras"
-        android:layout_alignTop="@+id/edtCodBarras"
-        android:layout_marginTop="46dp"
-        android:text="Ver" />
+        android:text="Ver"
+        android:layout_marginRight="37dp"
+        android:layout_marginEnd="37dp"
+        android:layout_alignBottom="@+id/edtCodBarras"
+        android:layout_toLeftOf="@+id/btnLimpar"
+        android:layout_toStartOf="@+id/btnLimpar" />
 
     <Button
         android:id="@+id/btnLimpar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Limpar"
-        android:layout_alignBaseline="@+id/btnVer"
-        android:layout_alignBottom="@+id/btnVer"
-        android:layout_toRightOf="@+id/btnVer"
-        android:layout_toEndOf="@+id/btnVer"
-        android:layout_marginLeft="37dp"
-        android:layout_marginStart="37dp" />
+        android:layout_marginRight="61dp"
+        android:layout_marginEnd="61dp"
+        android:layout_alignBottom="@+id/edtCodBarras"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>
