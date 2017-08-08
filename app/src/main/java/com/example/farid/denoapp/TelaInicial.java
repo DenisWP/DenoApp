@@ -1,6 +1,7 @@
 package com.example.farid.denoapp;
 
 
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.Editable;
@@ -15,6 +16,7 @@ import java.io.IOException;
 
 
 public class TelaInicial extends AppCompatActivity implements View.OnKeyListener{
+    // apagar View.OnKeyListener se o leitor não funcionar.
 
 
     ImageView LogoFarid;
@@ -40,16 +42,13 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
         btnVer = (Button) findViewById(R.id.btnVer);
         btnLimpar = (Button) findViewById(R.id.btnLimpar);
-
-
-        edtCodBarras.setOnKeyListener(this);
+        edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
         btnLimpar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 limparDados();
             }
         });
-
         carregaEnter();
     }
 
@@ -65,10 +64,31 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
                 CB = edtCodBarras.getText().toString();
                 url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
                 new AsyncTaskExample().execute(url);
+
+                /*Thred criada para apagar os campos após 5 segundos*/
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        try {
+                            Thread.sleep(5000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                limparDados();
+                            }
+                        });
+                    }
+                }).start();
             }
         });
     }
 
+    /*
+    * Apagar esse função se o leitor não funcionar.
+    * */
     @Override
     public boolean onKey(View v, int keyCode, KeyEvent event) {
         if((event.getAction()==KeyEvent.ACTION_DOWN)&&(keyCode==KeyEvent.KEYCODE_ENTER)){
