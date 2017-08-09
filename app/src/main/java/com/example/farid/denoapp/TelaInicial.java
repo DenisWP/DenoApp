@@ -20,7 +20,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
     TextView txtCodProduto, txtDescProduto, txtSifrao, txtValor;
     String[] objetos = new String[3];
     String regiao = "1";
-    Button btnVer;
+    ImageButton btnVer;
     String url, CB;
     JSONObject jsonObjectTexts;
 
@@ -36,7 +36,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         txtSifrao = (TextView) findViewById(R.id.txtSifrao);
         txtValor = (TextView) findViewById(R.id.txtValor);
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
-        btnVer = (Button) findViewById(R.id.btnVer);
+        btnVer = (ImageButton) findViewById(R.id.btnVer);
 
         edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
         carregaEnter();

@@ -11,11 +11,10 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         app:srcCompat="@mipmap/logo"
-        android:layout_alignTop="@+id/txtDescProduto"
+        android:layout_alignBottom="@+id/txtCodProduto"
         android:layout_toLeftOf="@+id/txtSifrao"
-        android:layout_marginRight="113dp"
-        android:layout_marginEnd="113dp"
-        android:layout_marginTop="174dp"
+        android:layout_marginRight="91dp"
+        android:layout_marginEnd="91dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -28,8 +27,8 @@
         android:hint="@string/edtLeitorBarras"
         android:inputType="textPersonName"
         android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/txtValor"
-        android:layout_alignEnd="@+id/txtValor" />
+        android:layout_alignLeft="@+id/txtSifrao"
+        android:layout_alignStart="@+id/txtSifrao" />
 
     <TextView
         android:id="@+id/txtCodProduto"
@@ -68,6 +67,8 @@
         android:hint="@string/txtSifrao"
         android:inputType="textPersonName"
         android:textSize="100sp"
+        android:layout_marginRight="21dp"
+        android:layout_marginEnd="21dp"
         android:layout_above="@+id/btnVer"
         android:layout_toLeftOf="@+id/txtValor"
         android:layout_toStartOf="@+id/txtValor" />
@@ -84,21 +85,22 @@
         android:textColorLink="@android:color/holo_red_dark"
         android:textSize="100sp"
         tools:textSize="100sp"
+        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp"
         android:layout_above="@+id/btnVer"
-        android:layout_alignRight="@+id/btnVer"
-        android:layout_alignEnd="@+id/btnVer" />
-
-    <Button
-        android:id="@+id/btnVer"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Ver"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginRight="26dp"
-        android:layout_marginEnd="26dp" />
+        android:layout_alignParentEnd="true" />
 
+    <ImageButton
+        android:id="@+id/btnVer"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@android:color/transparent"
+        android:scaleType="centerInside"
+        android:src="@mipmap/lupa"
+        android:layout_alignBottom="@+id/txtCodProduto"
+        android:layout_toRightOf="@+id/edtCodBarras"
+        android:layout_toEndOf="@+id/edtCodBarras" />
 
 
 
