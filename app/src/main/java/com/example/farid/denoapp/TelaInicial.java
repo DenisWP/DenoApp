@@ -40,18 +40,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
 
         edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
         carregaEnter();
-
-
     }
-
-
-
-
-
-
-
-
-
 
     /*
     * Função criada para testar se a tecla "ENTER" do teclado ou o "Conclui." foi pressionada.
@@ -98,7 +87,6 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         }
         return false;
     }
-
 
     public void limparDados() {
             txtCodProduto.setText("");
