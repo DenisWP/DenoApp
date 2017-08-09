@@ -15,7 +15,9 @@
 
         <!-- Definindo minha tela incial -->
         <activity android:name=".TelaInicial"
-            android:screenOrientation="landscape"> <!-- Travando o layout para horizontal-->
+            android:windowSoftInputMode="stateHidden"
+            android:screenOrientation="landscape"> <!-- 2º: Travando o layout para horizontal-->
+                                                     <!-- 1º: Trava teclado ao entrar no app-->
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
