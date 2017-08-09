@@ -119,10 +119,10 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         }
 
         @Override
-        protected void onPostExecute(String[] stringFromDoInBackground) {
-            txtCodProduto.setText(stringFromDoInBackground[0]);
-            txtDescProduto.setText(stringFromDoInBackground[1]);
-            txtValor.setText(stringFromDoInBackground[2]);
+        protected void onPostExecute(String[] jsonWinthor) {
+            txtCodProduto.setText(jsonWinthor[0]);
+            txtDescProduto.setText(jsonWinthor[1]);
+            txtValor.setText(jsonWinthor[2]);
             txtSifrao.setVisibility(View.VISIBLE);
         }
     }
