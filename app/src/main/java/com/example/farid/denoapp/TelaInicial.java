@@ -38,6 +38,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
         btnVer = (ImageButton) findViewById(R.id.btnVer);
 
+        txtSifrao.setVisibility(View.INVISIBLE);
         edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
         carregaEnter();
     }
@@ -93,6 +94,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
             txtDescProduto.setText("");
             txtValor.setText("");
             edtCodBarras.setText("");
+            txtSifrao.setVisibility(View.INVISIBLE);
     }
 
 
@@ -121,6 +123,7 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
             txtCodProduto.setText(stringFromDoInBackground[0]);
             txtDescProduto.setText(stringFromDoInBackground[1]);
             txtValor.setText(stringFromDoInBackground[2]);
+            txtSifrao.setVisibility(View.VISIBLE);
         }
     }
 }
