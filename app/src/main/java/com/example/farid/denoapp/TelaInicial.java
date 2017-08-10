@@ -12,8 +12,6 @@ import java.io.IOException;
 
 
 public class TelaInicial extends AppCompatActivity {
-    // apagar View.OnKeyListener se o leitor não funcionar.
-
 
     ImageView LogoFarid;
     EditText edtCodBarras;
@@ -73,10 +71,6 @@ public class TelaInicial extends AppCompatActivity {
         });
 
     }
-
-    /*
-    * Apagar esse função se o leitor não funcionar.
-    */
 
     public void limparDados() {
             txtCodProduto.setText("");
