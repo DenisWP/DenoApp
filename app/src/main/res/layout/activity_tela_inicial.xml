@@ -31,6 +31,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/edtLeitorBarras"
+        android:gravity="center"
         android:layout_alignParentBottom="true"
         android:layout_alignRight="@+id/txtValor"
         android:layout_alignEnd="@+id/txtValor" />

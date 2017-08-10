@@ -35,7 +35,6 @@ public class TelaInicial extends AppCompatActivity {
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
         txtSifrao.setVisibility(View.INVISIBLE);
 
-
         edtCodBarras.setFocusableInTouchMode(true);
         edtCodBarras.requestFocus();
         edtCodBarras.setOnKeyListener(new View.OnKeyListener() {
@@ -47,7 +46,6 @@ public class TelaInicial extends AppCompatActivity {
                     new AsyncTaskExample().execute(url);
 
                     /*Thred criada para apagar os campos após 5 segundos*/
-
                     new Thread(new Runnable() {
                         @Override
                         public void run() {
@@ -69,7 +67,6 @@ public class TelaInicial extends AppCompatActivity {
                 return false;
             }
         });
-
     }
 
     public void limparDados() {
