@@ -11,27 +11,29 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         app:srcCompat="@mipmap/logo"
-        android:layout_alignBottom="@+id/txtCodProduto"
-        android:layout_toLeftOf="@+id/edtCodBarras"
-        android:layout_marginRight="53dp"
-        android:layout_marginEnd="53dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@+id/txtSifrao"
+        android:layout_marginRight="34dp"
+        android:layout_marginEnd="34dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/txtDescProduto" />
 
 
     <EditText
+        android:maxLines="1"
+        android:lines="1"
+        android:inputType="textImeMultiLine"
+        android:imeActionLabel="@string/btnVer"
+        android:imeOptions="actionDone"
         android:id="@+id/edtCodBarras"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/edtLeitorBarras"
-        android:inputType="textPersonName"
         android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/txtSifrao"
-        android:layout_alignStart="@+id/txtSifrao"
-        android:layout_toLeftOf="@+id/btnVer"
-        android:layout_toStartOf="@+id/btnVer" />
+        android:layout_alignRight="@+id/txtValor"
+        android:layout_alignEnd="@+id/txtValor" />
 
     <TextView
         android:id="@+id/txtCodProduto"
@@ -65,24 +67,23 @@
         android:id="@+id/txtSifrao"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_above="@+id/btnVer"
-        android:layout_marginEnd="21dp"
-        android:layout_marginRight="21dp"
-        android:layout_toLeftOf="@+id/txtValor"
-        android:layout_toStartOf="@+id/txtValor"
         android:ems="10"
         android:gravity="right"
         android:text="@string/txtSifrao"
         android:textSize="80sp"
         android:textColor="#000000"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:layout_below="@+id/txtDescProduto"
+        android:layout_toLeftOf="@+id/txtValor"
+        android:layout_toStartOf="@+id/txtValor"
+        android:layout_marginTop="28dp" />
 
     <TextView
         android:id="@+id/txtValor"
         android:layout_width="250dp"
         android:layout_height="150dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginRight="28dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
         android:ems="2"
         android:gravity="left"
         android:hint="@string/txtValor"
@@ -91,20 +92,10 @@
         android:textSize="80sp"
         android:textStyle="bold"
         tools:textSize="80sp"
-        android:layout_above="@+id/btnVer"
+        android:layout_alignBaseline="@+id/txtSifrao"
+        android:layout_alignBottom="@+id/txtSifrao"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
-
-    <ImageButton
-        android:id="@+id/btnVer"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:background="@android:color/transparent"
-        android:scaleType="centerInside"
-        android:src="@mipmap/lupa"
-        android:layout_alignParentBottom="true"
-        android:layout_alignRight="@+id/txtValor"
-        android:layout_alignEnd="@+id/txtValor" />
 
 
 

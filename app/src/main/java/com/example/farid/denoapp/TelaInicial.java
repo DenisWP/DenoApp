@@ -11,7 +11,7 @@ import org.json.JSONObject;
 import java.io.IOException;
 
 
-public class TelaInicial extends AppCompatActivity implements View.OnKeyListener {
+public class TelaInicial extends AppCompatActivity {
     // apagar View.OnKeyListener se o leitor não funcionar.
 
 
@@ -20,7 +20,6 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
     TextView txtCodProduto, txtDescProduto, txtSifrao, txtValor;
     String[] objetos = new String[3];
     String regiao = "1";
-    ImageButton btnVer;
     String url, CB;
     JSONObject jsonObjectTexts;
 
@@ -36,29 +35,22 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
         txtSifrao = (TextView) findViewById(R.id.txtSifrao);
         txtValor = (TextView) findViewById(R.id.txtValor);
         edtCodBarras = (EditText) findViewById(R.id.edtCodBarras);
-        btnVer = (ImageButton) findViewById(R.id.btnVer);
-
         txtSifrao.setVisibility(View.INVISIBLE);
-        edtCodBarras.setOnKeyListener(this); // apagar se o leitor não funcionar.
-        carregaEnter();
-    }
 
-    /*
-    * Função criada para testar se a tecla "ENTER" do teclado ou o "Conclui." foi pressionada.
-    * */
-    public void carregaEnter (){
-        btnVer.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                CB = edtCodBarras.getText().toString();
+        edtCodBarras.setFocusableInTouchMode(true);
+        edtCodBarras.requestFocus();
+        edtCodBarras.setOnKeyListener(new View.OnKeyListener() {
+            public boolean onKey(View v, int keyCode, KeyEvent event) {
+               if ((event.getAction() == KeyEvent.ACTION_DOWN) && (keyCode == KeyEvent.KEYCODE_ENTER)) {
+                    CB = edtCodBarras.getText().toString();
                     url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
+                    edtCodBarras.setText("");
                     new AsyncTaskExample().execute(url);
 
-                 /*Thred criada para apagar os campos após 5 segundos*/
+                    /*Thred criada para apagar os campos após 5 segundos*/
 
-
-                     new Thread(new Runnable() {
+                    new Thread(new Runnable() {
                         @Override
                         public void run() {
                             try {
@@ -68,32 +60,28 @@ public class TelaInicial extends AppCompatActivity implements View.OnKeyListener
                             }
                             runOnUiThread(new Runnable() {
                                 @Override
-                            public void run() {
-                                limparDados();
-                            }
-                        });
-                     }
+                                public void run() {
+                                    limparDados();
+                                }
+                            });
+                        }
                     }).start();
+                    return true;
+                }
+                return false;
             }
         });
+
     }
 
     /*
     * Apagar esse função se o leitor não funcionar.
     */
-    @Override
-    public boolean onKey(View v, int keyCode, KeyEvent event) {
-        if((event.getAction()==KeyEvent.ACTION_DOWN)&&(keyCode==KeyEvent.KEYCODE_ENTER)){
-            carregaEnter();
-        }
-        return false;
-    }
 
     public void limparDados() {
             txtCodProduto.setText("");
             txtDescProduto.setText("");
             txtValor.setText("");
-            edtCodBarras.setText("");
             txtSifrao.setVisibility(View.INVISIBLE);
     }
 

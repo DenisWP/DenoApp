@@ -7,6 +7,7 @@
     <string name="txtDescProduto"> Passe um produto !</string>
     <string name="txtSifrao">R$: </string>
     <string name="txtValor"></string>
+    <string name="btnVer">Ver</string>
 
     <!-- EDITTEXT-->
     <string name="edtLeitorBarras">Código de Barras</string>
