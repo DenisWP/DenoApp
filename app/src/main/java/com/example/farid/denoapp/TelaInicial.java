@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
+import android.view.animation.AnimationUtils;
 import android.widget.*;
 import android.os.AsyncTask;
 import org.json.JSONException;
@@ -15,7 +16,7 @@ public class TelaInicial extends AppCompatActivity {
 
     ImageView LogoFarid;
     EditText edtCodBarras;
-    TextView txtCodProduto, txtDescProduto, txtSifrao, txtValor;
+    TextView txtCodProd, txtDescProduto, txtSifrao, txtValor;
     String[] objetos = new String[3];
     String regiao = "1";
     String url, CB;
@@ -28,7 +29,7 @@ public class TelaInicial extends AppCompatActivity {
         setContentView(R.layout.activity_tela_inicial);
 
         LogoFarid = (ImageView) findViewById(R.id.LogoFarid);
-        txtCodProduto = (TextView) findViewById(R.id.txtCodProduto);
+        txtCodProd = (TextView) findViewById(R.id.txtCodProd);
         txtDescProduto = (TextView) findViewById(R.id.txtDescProduto);
         txtSifrao = (TextView) findViewById(R.id.txtSifrao);
         txtValor = (TextView) findViewById(R.id.txtValor);
@@ -70,7 +71,7 @@ public class TelaInicial extends AppCompatActivity {
     }
 
     public void limparDados() {
-            txtCodProduto.setText("");
+            txtCodProd.setText("");
             txtDescProduto.setText("");
             txtValor.setText("");
             txtSifrao.setVisibility(View.INVISIBLE);
@@ -99,7 +100,7 @@ public class TelaInicial extends AppCompatActivity {
 
         @Override
         protected void onPostExecute(String[] jsonWinthor) {
-            txtCodProduto.setText(jsonWinthor[0]);
+            txtCodProd.setText(jsonWinthor[0]);
             txtDescProduto.setText(jsonWinthor[1]);
             txtValor.setText(jsonWinthor[2]);
             txtSifrao.setVisibility(View.VISIBLE);

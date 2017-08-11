@@ -11,13 +11,10 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         app:srcCompat="@mipmap/logo"
-        android:layout_alignParentBottom="true"
-        android:layout_toLeftOf="@+id/txtSifrao"
-        android:layout_marginRight="34dp"
-        android:layout_marginEnd="34dp"
+        android:layout_marginTop="77dp"
+        android:layout_alignTop="@+id/txtSifrao"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/txtDescProduto" />
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:maxLines="1"
@@ -36,31 +33,21 @@
         android:layout_alignEnd="@+id/txtValor" />
 
     <TextView
-        android:id="@+id/txtCodProduto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/txtCodProduto"
-        android:layout_below="@+id/edtCodBarras"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <TextView
         android:id="@+id/txtDescProduto"
-        android:layout_width="match_parent"
+        android:layout_width="800dp"
         android:layout_height="200dp"
-        android:maxLines="2"
-        android:textStyle="bold"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="11dp"
+        android:layout_marginTop="22dp"
         android:ems="10"
         android:gravity="center"
         android:hint="@string/txtDescProduto"
+        android:maxLines="2"
         android:textColor="#000000"
         android:textColorLink="@android:color/holo_red_dark"
         android:textSize="60sp"
+        android:textStyle="bold"
         tools:textSize="60sp" />
 
     <TextView
@@ -70,33 +57,43 @@
         android:ems="10"
         android:gravity="right"
         android:text="@string/txtSifrao"
-        android:textSize="80sp"
         android:textColor="#000000"
+        android:textSize="100sp"
         android:textStyle="bold"
-        android:layout_below="@+id/txtDescProduto"
-        android:layout_toLeftOf="@+id/txtValor"
-        android:layout_toStartOf="@+id/txtValor"
-        android:layout_marginTop="28dp" />
+        android:layout_above="@+id/edtCodBarras"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/txtValor"
         android:layout_width="250dp"
         android:layout_height="150dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
         android:ems="2"
         android:gravity="left"
         android:hint="@string/txtValor"
         android:textColor="#000000"
         android:textColorLink="@android:color/holo_red_dark"
-        android:textSize="80sp"
+        android:textSize="100sp"
         android:textStyle="bold"
-        tools:textSize="80sp"
+        tools:textSize="100sp"
         android:layout_alignBaseline="@+id/txtSifrao"
         android:layout_alignBottom="@+id/txtSifrao"
+        android:layout_toRightOf="@+id/txtSifrao"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
+    <TextView
+        android:id="@+id/txtCodProd"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:textColor="#000000"
+        android:hint=""
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/txtDescProduto"
+        android:layout_toLeftOf="@+id/txtDescProduto"
+        android:textSize="60sp"
+        android:textStyle="bold"/>
 
 
 </RelativeLayout>
