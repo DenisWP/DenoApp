@@ -9,6 +9,8 @@ import android.os.AsyncTask;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
 
 public class TelaInicial extends AppCompatActivity {
 
@@ -98,7 +100,12 @@ public class TelaInicial extends AppCompatActivity {
         protected void onPostExecute(String[] jsonWinthor) {
             txtCodProd.setText(jsonWinthor[0]);
             txtDescProduto.setText(jsonWinthor[1]);
-            txtValor.setText(jsonWinthor[2]);
+
+
+            double value = Double.parseDouble(jsonWinthor[2]);
+            String strValue = String.format("%.2f", value );
+            txtValor.setText(strValue);
+
             txtSifrao.setVisibility(View.VISIBLE);
         }
     }
