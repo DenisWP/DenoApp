@@ -101,10 +101,9 @@ public class TelaInicial extends AppCompatActivity {
             txtCodProd.setText(jsonWinthor[0]);
             txtDescProduto.setText(jsonWinthor[1]);
 
-
-            double value = Double.parseDouble(jsonWinthor[2]);
-            String strValue = String.format("%.2f", value );
-            txtValor.setText(strValue);
+            double preco = Double.parseDouble(jsonWinthor[2]);
+            String strPreco = String.format("%.2f", preco );
+            txtValor.setText(strPreco);
 
             txtSifrao.setVisibility(View.VISIBLE);
         }
