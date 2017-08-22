@@ -4,13 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
-import android.view.animation.AnimationUtils;
 import android.widget.*;
 import android.os.AsyncTask;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.io.IOException;
-
 
 public class TelaInicial extends AppCompatActivity {
 
@@ -45,7 +43,6 @@ public class TelaInicial extends AppCompatActivity {
                     url = "http://192.168.0.12:8001/api/Produtos?regiao=" +regiao+ "&codigobarra="+CB;
                     edtCodBarras.setText("");
                     new AsyncTaskExample().execute(url);
-
                     /*Thred criada para apagar os campos após 5 segundos*/
                     new Thread(new Runnable() {
                         @Override
@@ -79,7 +76,6 @@ public class TelaInicial extends AppCompatActivity {
 
 
     public class AsyncTaskExample extends AsyncTask<String, String, String[]> {
-
 
         @Override
         protected void onPreExecute() {

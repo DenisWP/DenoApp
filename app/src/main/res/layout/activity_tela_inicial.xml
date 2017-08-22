@@ -12,11 +12,10 @@
         android:layout_width="300dp"
         android:layout_height="300dp"
         app:srcCompat="@mipmap/logo"
-        android:layout_marginLeft="43dp"
-        android:layout_marginStart="43dp"
         android:layout_alignTop="@+id/txtSifrao"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="36dp" />
 
     <EditText
         android:maxLines="1"
@@ -63,11 +62,12 @@
         android:textSize="100sp"
         android:textStyle="bold"
         android:layout_above="@+id/edtCodBarras"
-        android:layout_centerHorizontal="true" />
+        android:layout_toLeftOf="@+id/txtValor"
+        android:layout_toStartOf="@+id/txtValor" />
 
     <TextView
         android:id="@+id/txtValor"
-        android:layout_width="250dp"
+        android:layout_width="350dp"
         android:layout_height="150dp"
         android:ems="2"
         android:gravity="left"
@@ -77,9 +77,7 @@
         android:textSize="100sp"
         android:textStyle="bold"
         tools:textSize="100sp"
-        android:layout_alignBaseline="@+id/txtSifrao"
-        android:layout_alignBottom="@+id/txtSifrao"
-        android:layout_toRightOf="@+id/txtSifrao"
+        android:layout_above="@+id/edtCodBarras"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 

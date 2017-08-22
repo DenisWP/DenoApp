@@ -16,9 +16,6 @@ import java.nio.charset.Charset;
 
 public class JsonParser {
 
-
-    //readJsonFromUrl = LerJsonUrl
-
     public static JSONObject LerJsonUrl(String url) throws IOException, JSONException {
         InputStream is = new URL(url).openStream();
         try  {
@@ -29,8 +26,6 @@ public class JsonParser {
             is.close();
         }
     }
-
-    //readAll = Ler
 
     private static String Ler(Reader rd) throws IOException {
         StringBuilder sb = new StringBuilder();
